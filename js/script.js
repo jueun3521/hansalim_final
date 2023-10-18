@@ -1,4 +1,13 @@
 window.onload = function () {
+  // 모달창 기능
+    let modalWrap = document.querySelector(".modal-wrap");
+    let modalClose = document.querySelector(".modal-close");
+    modalClose.addEventListener("click", function () {
+      modalWrap.classList.add("fadeOut");
+      modalWrap.addEventListener("animationend", function () {
+        modalWrap.style.display = "none";
+      });
+    });
   // 상단
   const wrap = document.querySelector(".wrap");
   const header = document.querySelector(".header");
